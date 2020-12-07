@@ -7,9 +7,6 @@ Simple, opinionated TS + Tailwind project template for experimenting w/ Vite.
 - Vue 3
 - TypeScript
 - Tailwind CSS w/ plugins preinstalled
-  - `@tailwindcss/aspect-ratio`
-  - `@tailwindcss/typography`
-  - `@tailwindcss/forms`
 - Eslint
 - Prettier
 - Simple reactive store
@@ -43,10 +40,6 @@ Run Cypress tests in headless mode:
 ```
 yarn test:ci
 ```
-
-## Contributing
-
-Contributions are welcome! Please follow the [code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) when interacting with others.
 
 ---
 
