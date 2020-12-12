@@ -7,7 +7,50 @@
     <title>Vite Typescript + Tailwind Starter</title>
   </head>
   <body class="w-screen h-screen min-h-0">
-    <div id="app" class="flex w-screen h-screen min-h-0"></div>
+    <div id="app" class="p-2 w-full"></div>
+
+    <div class="container p-2" style="max-width: 740px;">
+      <div
+        class="grid grid-cols-7 grid-rows-3 gap-1"
+        style="grid-auto-columns: minmax(100px, 1fr);"
+      >
+        <div style="height: 100px;" class="bg-yellow-100 col-span-2 row-start-3 col-start-1">
+          logo
+        </div>
+        <div class="bg-green-100 row-start-3 col-start-7">5</div>
+        <div class="bg-green-500 row-start-3 col-start-6">4</div>
+        <div class="bg-green-100 row-start-3 col-start-5">3</div>
+        <div class="bg-green-300 row-start-3 col-start-4">2</div>
+        <div class="bg-green-100 row-start-3 col-start-3">1</div>
+      </div>
+    </div>
+
+    <div class="hidden container p-2 mx-auto" style="max-width: 480px;">
+      <div class="grid grid-cols-3 grid-rows-3 gap-1">
+        <div style="height: 150px;" class="bg-yellow-100 col-span-2 row-start-2 col-start-1">
+          logo
+        </div>
+        <div class="bg-green-100 row-start-3 col-start-2">5</div>
+        <div class="bg-green-500 row-start-3 col-start-3">4</div>
+        <div class="bg-green-100 row-start-2 col-start-3">3</div>
+        <div class="bg-green-300 row-start-1 col-start-3">2</div>
+        <div class="bg-green-100 row-start-1 col-start-2">1</div>
+      </div>
+    </div>
+
+    <div class="container p-2 mx-auto" style="max-width: 320px;">
+      <div class="grid grid-cols-3 grid-rows-3 gap-1">
+        <div style="height: 100px;" class="bg-yellow-100 col-span-2 row-start-2 col-start-1">
+          logo
+        </div>
+        <div class="bg-green-100 row-start-3 col-start-2">5</div>
+        <div class="bg-green-500 row-start-3 col-start-3">4</div>
+        <div class="bg-green-100 row-start-2 col-start-3">3</div>
+        <div class="bg-green-300 row-start-1 col-start-3">2</div>
+        <div class="bg-green-100 row-start-1 col-start-2">1</div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
