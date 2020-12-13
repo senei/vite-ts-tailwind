@@ -1,22 +1,30 @@
 <template>
-  <div class="grid grid-cols-7 grid-rows-3 gap-1 w-full ml-4" 
-    :style="{'grid-template-columns': gtcStyle}">
-    <div ref="logoBox" style=" height: 100px; " 
-         class="bg-yellow-100 row-start-2 col-start-1 col-span-2">
-      logo
+  <div class="grid grid-cols-auto grid-rows-1 gap-1 absolute">
+    <div @click="active = 0" ref="logoBox" 
+      class="logo-box col-start-1">
+      <div>logo |</div>
     </div>
-    <div @click="active = (active == 5 ? -1 : 5)" class="bg-green-300 row-start-2 col-start-7">D5</div>
-    <!-- <div class="bg-green-200 row-start-3 col-start-2">M5</div> -->
-    <div @click="active = (active == 4 ? -1 : 4)" class="bg-green-300 row-start-2 col-start-6">D4</div>
-    <!-- <div class="bg-green-200 row-start-1 col-start-2">M4</div> -->
-    <div @click="active = (active == 3 ? -1 : 3)" class="bg-green-300 row-start-2 col-start-5">D3</div>
-    <!-- <div class="bg-green-200 row-start-3 col-start-3">M3</div> -->
-    <div @click="active = (active == 2 ? -1 : 2)" class="bg-green-300 row-start-2 col-start-4">D2</div>
-    <!-- <div class="bg-green-200 row-start-1 col-start-3">M2</div> -->
-    <div @click="active = (active == 1 ? -1 : 1)" class="bg-green-100 row-start-2 col-start-3">D1</div>
-
-    <div class="row-start-2 col-start-8"></div>
-
+    <div @click="active = (active == 1 ? -1 : 1)" :class="{'active': active == 1}" 
+      ref="box-1" class="box box-1 col-start-2">
+      <div class="flex-1 self-center">D1</div>
+    </div>
+    <div @click="active = (active == 2 ? -1 : 2)" :class="{'active': active == 2}"
+      ref="box-2" class="box box-2 col-start-3">
+      <div class="flex-1 self-center">D2</div>
+    </div>
+    <div @click="active = (active == 3 ? -1 : 3)" :class="{'active': active == 3}"
+      ref="box-3" class="box box-3 col-start-4">
+      <div class="flex-1 self-center">D3</div>
+    </div>
+    <div @click="active = (active == 4 ? -1 : 4)" :class="{'active': active == 4}"
+      ref="box-4" class="box box-4 col-start-5">
+      <div class="flex-1 self-center">D4</div>
+    </div>
+    <div @click="active = (active == 5 ? -1 : 5)" :class="{'active': active == 5}"
+      ref="box-5" class="box box-5 col-start-6">
+      <div class="flex-1 self-center">D5</div>
+    </div>
+    <div class="h-100 w-10 row-start-1 col-start-7"></div>
   </div>
 </template>
 
@@ -33,42 +41,46 @@ export default defineComponent({
   setup() {
     const logoBox = ref(null);
     const active = ref(0);
-    const _gtc = reactive([100,100,200,120,110,100]);
-    const gtc = reactive([100,100,200,120,110,100]);
-    const gtcStyle = computed(() => `${gtc[0]}px ${gtc[0]}px ${gtc[1]}px ${gtc[2]}px ${gtc[3]}px ${gtc[4]}px ${gtc[5]}px ${gtc[0]}px`);
-    
+     
     onMounted(() => {
-      let _gtc = Object.assign({}, gtc);
-      window._gtc = _gtc;
-      console.log(_gtc)
     });
 
     watch(active, ( _new, _old)=>{
-      if(_new === -1 && _old !==0) 
-           _gtc[_old] = 100;
-      else _gtc[_new] = 540;
+      console.info(_new, _old)      
     });
-    watch(_gtc, ( _new, _old)=>{
-      function animate(time) { requestAnimationFrame(animate); TWEEN.update(time); };
-      requestAnimationFrame(animate);
-      
-      window.tween = new TWEEN.Tween(Object.assign({}, gtc)).to(Object.assign({}, _gtc), 500)
-      .onUpdate((arr) => {
-        gtc[1] = Math.floor(arr[1]);  gtc[2] = Math.floor(arr[2]);
-        gtc[3] = Math.floor(arr[3]);  gtc[4] = Math.floor(arr[4]);
-        gtc[5] = Math.floor(arr[5]);
-      }).start();
-    });
-
+    
     return {
-      logoBox, gtc, gtcStyle,active
+      logoBox, active
     };
   }
 })
 </script>
 
-<style>
-.grid-cols-7 {
+<style >
+.grid-cols-auto {
+  grid-auto-columns: min-content;
+  bottom: 0.5rem;
+}
+.grid-cols-auto > div{
+  text-align: center;
   transition: all 0.5s;
+}
+.grid-cols-auto > .h-100 {
+  height: 100px; 
+}
+.grid-cols-auto > .logo-box {
+  width: 216px;
+  text-align: right;
+  @apply flex items-center justify-end pr-1; 
+  @apply border-r-4 border-gray-400;
+}
+.grid-cols-auto > .box {
+  width: 100px;
+  @apply flex items-center;
+  @apply border border-gray-400 border-dashed;
+}
+.grid-cols-auto > .box.active {
+  width: 540px;
+  @apply mx-8;
 }
 </style>
