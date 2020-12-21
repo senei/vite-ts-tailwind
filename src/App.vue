@@ -1,86 +1,93 @@
 <template>
-  <div class="grid grid-cols-auto grid-rows-1 gap-1 absolute">
-    <div @click="active = 0" ref="logoBox" 
-      class="logo-box col-start-1">
-      <div>logo |</div>
+  <div class="grid grid-auto-cols grid-rows-3 gap-1">
+    <div class="grid-2-2 logo row-start-1 col-start-1 col-span-2 row-span-2"><svgLogo /></div>
+    <div class="grid-1-1 relative">
+      <img
+        src="https://source.unsplash.com/MldQeWmF2_g/300x300"
+        class="border-8 border-white absolute w-full h-full"
+      />
+      <svg width="100%" viewBox="0 0 512 512">
+        <path
+          d="M446 0H66C29.607 0 0 29.607 0 66v380c0 36.393 29.607 66 66 66h380c36.393 0 66-29.607 66-66V66c0-36.393-29.607-66-66-66zm46 446c0 25.364-20.636 46-46 46H66c-25.364 0-46-20.636-46-46V66c0-25.364 20.636-46 46-46h380c25.364 0 46 20.636 46 46v380z"
+        />
+        <path
+          d="M412.446 210.188c-.001 0-.001-.001 0 0-14.16-16.25-33.791-24.489-58.351-24.489-17.689 0-33.058 3.65-45.683 10.849-6.079 3.47-12.121 8.055-18.083 13.718v-9.537c0-5.523-4.478-10-10-10h-72.805c-5.522 0-10 4.477-10 10v222.519c0 5.523 4.478 10 10 10h72.268c5.522 0 10-4.477 10-10V297.061c0-16.801 12.339-30.639 28.092-31.503l2.549-.14c6.168-.332 12.128 1.889 16.76 6.274 5.039 4.769 7.929 11.626 7.929 18.813v132.742c0 5.523 4.478 10 10 10h68.128c5.522 0 10-4.477 10-10.002V281.814c0-31.679-7-55.778-20.804-71.626zm.804 203.059h-48.129V290.505c0-12.656-5.168-24.807-14.18-33.338-8.663-8.2-19.892-12.367-31.605-11.719l-2.549.14c-26.352 1.446-46.995 24.056-46.995 51.473v116.185h-52.268V210.728h52.805v26.248a10 10 0 0018.058 5.923c9.996-13.597 20.069-23.348 29.937-28.979 9.565-5.455 21.6-8.221 35.771-8.221 18.783 0 32.936 5.766 43.27 17.627l-.001-.001c10.541 12.102 15.886 31.781 15.886 58.491v131.431zM165.879 190.729H93.074c-5.522 0-10 4.477-10 10V284c0 5.523 4.478 10 10 10s10-4.477 10-10v-73.271h52.805v202.518h-52.805V369c0-5.523-4.478-10-10-10s-10 4.477-10 10v54.247c0 5.523 4.478 10 10 10h72.805c5.522 0 10-4.477 10-10V200.729c0-5.523-4.478-10-10-10z"
+        />
+        <path
+          d="M100.149 321.93a10.096 10.096 0 00-7.08-2.93c-2.63 0-5.21 1.07-7.069 2.93-1.861 1.86-2.931 4.44-2.931 7.07s1.071 5.21 2.931 7.07a10.072 10.072 0 007.069 2.93c2.641 0 5.211-1.07 7.08-2.93 1.861-1.86 2.931-4.44 2.931-7.07s-1.071-5.21-2.931-7.07zM129.477 78.753c-27.971 0-50.727 22.756-50.727 50.727s22.756 50.727 50.727 50.727 50.728-22.756 50.728-50.727-22.756-50.727-50.728-50.727zm0 81.454c-16.943 0-30.727-13.784-30.727-30.727s13.785-30.727 30.727-30.727c16.943 0 30.728 13.784 30.728 30.727s-13.785 30.727-30.728 30.727zM388.636 48h-81.5c-5.522 0-10 4.477-10 10s4.478 10 10 10h81.5c5.522 0 10-4.477 10-10s-4.478-10-10-10zM261.755 48h-.119c-5.522 0-10 4.477-10 10s4.478 10 10 10h.119c5.522 0 10-4.477 10-10s-4.478-10-10-10z"
+        />
+      </svg>
     </div>
-    <div @click="active = (active == 1 ? -1 : 1)" :class="{'active': active == 1}" 
-      ref="box-1" class="box box-1 col-start-2">
-      <div class="flex-1 self-center">D1</div>
+    <div class="grid-1-2 quote relative">
+      <img
+        src="https://source.unsplash.com/aF5rhTEmqnk/300x300"
+        class="border-8 border-white absolute w-full h-full"
+      />
+      <svg width="100%" viewBox="0 0 512 512">
+        <path
+          d="M64.006 212.872c-5.522 0-10 4.499-10 10.022s4.477 10 10 10c5.522 0 10-4.477 10-10v-.044c0-5.523-4.478-9.978-10-9.978z"
+        />
+        <path
+          d="M407.994 0H104.006c-27.57 0-50 22.43-50 50v133.16c0 5.523 4.478 10 10 10s10-4.477 10-10V50c0-16.542 13.458-30 30-30h303.988c16.542 0 30 13.458 30 30v332c0 16.542-13.458 30-30 30H104.006c-11.248 0-21.638 3.735-30 10.027V261.708c0-5.523-4.478-10-10-10s-10 4.477-10 10V462c0 27.57 22.43 50 50 50h303.988c27.57 0 50-22.43 50-50V50c0-27.57-22.43-50-50-50zm30 462c0 16.542-13.458 30-30 30H104.006c-16.542 0-30-13.458-30-30s13.458-30 30-30h303.988a49.743 49.743 0 0029.996-10.021c-.079 16.475-13.503 29.854-29.996 29.854H154.339c-5.522 0-10 4.477-10 10s4.478 10 10 10h253.655c11.248 0 21.638-3.735 30-10.027V462z"
+        />
+        <path
+          d="M127.781 455.038a10.072 10.072 0 00-7.069-2.93c-2.63 0-5.209 1.07-7.07 2.93-1.861 1.86-2.93 4.44-2.93 7.07s1.07 5.21 2.93 7.07c1.86 1.86 4.44 2.93 7.07 2.93s5.21-1.07 7.069-2.93a10.072 10.072 0 002.931-7.07c0-2.64-1.071-5.21-2.931-7.07zM373.205 246.836l-37.435-37.434c-5.588-5.588-13.018-8.666-20.921-8.666-7.902 0-15.332 3.078-20.92 8.666l-12.178 12.178a4.71 4.71 0 01-3.343 1.384 4.7 4.7 0 01-3.341-1.384l-36.525-36.525a4.73 4.73 0 010-6.683l12.179-12.178c11.535-11.535 11.535-30.305 0-41.841L213.317 86.95a29.59 29.59 0 00-22.691-8.613 29.605 29.605 0 00-21.5 11.264h-.001l-8.032 10.232c-29.746 37.892-26.491 92.154 7.572 126.218l65.438 65.438c18.477 18.477 42.889 27.887 67.415 27.887 20.69 0 41.463-6.703 58.803-20.315l10.232-8.033a29.61 29.61 0 0011.264-21.5 29.61 29.61 0 00-8.612-22.692zm-11.355 21.497a9.46 9.46 0 01-3.648 6.965l-10.232 8.033c-29.939 23.503-72.813 20.931-99.726-5.983l-65.438-65.438c-26.914-26.914-29.486-69.787-5.982-99.726l8.032-10.232a9.468 9.468 0 016.966-3.65 9.456 9.456 0 017.352 2.791l37.404 37.403c3.737 3.738 3.737 9.82 0 13.557l-12.179 12.179c-9.641 9.641-9.641 25.327 0 34.968l36.525 36.525c4.67 4.67 10.879 7.242 17.483 7.242s12.813-2.572 17.484-7.242l12.179-12.179a9.519 9.519 0 016.777-2.808c2.56 0 4.967.997 6.778 2.808l37.435 37.434a9.465 9.465 0 012.79 7.353z"
+        />
+      </svg>
     </div>
-    <div @click="active = (active == 2 ? -1 : 2)" :class="{'active': active == 2}"
-      ref="box-2" class="box box-2 col-start-3">
-      <div class="flex-1 self-center">D2</div>
-    </div>
-    <div @click="active = (active == 3 ? -1 : 3)" :class="{'active': active == 3}"
-      ref="box-3" class="box box-3 col-start-4">
-      <div class="flex-1 self-center">D3</div>
-    </div>
-    <div @click="active = (active == 4 ? -1 : 4)" :class="{'active': active == 4}"
-      ref="box-4" class="box box-4 col-start-5">
-      <div class="flex-1 self-center">D4</div>
-    </div>
-    <div @click="active = (active == 5 ? -1 : 5)" :class="{'active': active == 5}"
-      ref="box-5" class="box box-5 col-start-6">
-      <div class="flex-1 self-center">D5</div>
-    </div>
-    <div class="h-100 w-10 row-start-1 col-start-7"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent,ref,reactive,watch,computed,onMounted } from 'vue'
+import { defineComponent, ref, reactive, watch, computed, onMounted } from 'vue'
 import TWEEN from '@tweenjs/tween.js'
 
 import HelloWorld from './components/HelloWorld.vue'
+import svgLogo from './components/SvgLogo.vue'
 
 export default defineComponent({
   components: {
     HelloWorld,
+    svgLogo,
   },
   setup() {
-    const logoBox = ref(null);
-    const active = ref(0);
-     
-    onMounted(() => {
-    });
+    const logoBox = ref(null)
+    const active = ref(0)
 
-    watch(active, ( _new, _old)=>{
-      console.info(_new, _old)      
-    });
-    
+    onMounted(() => {})
+
+    watch(active, (_new, _old) => {
+      console.info(_new, _old)
+    })
+
     return {
-      logoBox, active
-    };
-  }
+      logoBox,
+      active,
+    }
+  },
 })
 </script>
 
-<style >
-.grid-cols-auto {
-  grid-auto-columns: min-content;
-  bottom: 0.5rem;
+<style>
+.grid.grid-auto-cols {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+  max-width: 458px;
+  margin: 0 auto;
 }
-.grid-cols-auto > div{
-  text-align: center;
-  transition: all 0.5s;
+@media (max-width: 460px) {
+  .grid.grid-auto-cols {
+    max-width: 304px;
+  }
 }
-.grid-cols-auto > .h-100 {
-  height: 100px; 
-}
-.grid-cols-auto > .logo-box {
-  width: 216px;
-  text-align: right;
-  @apply flex items-center justify-end pr-1; 
-  @apply border-r-4 border-gray-400;
-}
-.grid-cols-auto > .box {
-  width: 100px;
-  @apply flex items-center;
-  @apply border border-gray-400 border-dashed;
-}
-.grid-cols-auto > .box.active {
-  width: 540px;
-  @apply mx-8;
+
+.grid-1-2 svg,
+.grid-1-1 svg {
+  padding: 2rem;
+  fill: #fff;
+  stroke-width: 5px;
+  stroke: #fff;
+  stop-opacity: 0.25;
+  position: relative;
+  z-index: 2;
 }
 </style>

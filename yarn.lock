@@ -625,6 +625,16 @@ ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+animatic@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/animatic/-/animatic-1.0.1.tgz#925e8bcaf69f6cada9e7e4ae43566f6f8f40905d"
+  integrity sha1-kl6LyvafbK2p5+SuQ1Zvb49AkF0=
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+
 ansi-colors@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
@@ -1662,11 +1672,6 @@ es-module-lexer@^0.3.25:
   version "0.3.26"
   resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-0.3.26.tgz#7b507044e97d5b03b01d4392c74ffeb9c177a83b"
   integrity sha512-Va0Q/xqtrss45hWzP8CZJwzGSZJjDM5/MJRE3IXXnUCcVLElR9BRaE9F62BopysASyc4nM3uwhSW7FFB9nlWAA==
-
-es6-tween@^5.5.11:
-  version "5.5.11"
-  resolved "https://registry.yarnpkg.com/es6-tween/-/es6-tween-5.5.11.tgz#ff930b55f72636ce99628822c92970cc2a8ec08b"
-  integrity sha512-pRog/aPrGkPnblRJvuGcVTxlLqIu1TivB39zc6lw7jgOqIyOkqTBlTVr7ynlLjVGviezfYc3CZJWVAtOU3aoXQ==
 
 esbuild@^0.8.12:
   version "0.8.20"
@@ -4218,11 +4223,6 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
-
-tween@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/tween/-/tween-0.9.0.tgz#f856c7a9c9ab85ca9a2bc02282591aa2513a20ed"
-  integrity sha1-+FbHqcmrhcqaK8AiglkaolE6IO0=
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
